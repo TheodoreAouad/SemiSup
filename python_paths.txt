@@ -1,0 +1,3 @@
+/home/aouadt/SpondiDetect/SpondiDetect
+./
+/media/theodore/HDD1/Spondi/SpondiDetect

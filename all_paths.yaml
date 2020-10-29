@@ -1,0 +1,111 @@
+atlas:
+  aurane:
+    path_voxel: '/home/lenkovat/Stage/Data/atlases/aurane/3Daurane.nii'
+    path_sacrum: '/home/lenkovat/Stage/Data/atlases/aurane/3Daurane-sacrum.nii'
+    path_iliaque: '/home/lenkovat/Stage/Data/atlases/aurane/3Daurane-iliaque.nii'
+    path_dicom_0: '/home/lenkovat/Stage/Data/irm_aurane/images/pat00000/st000000/se000006/mr000000'
+    path_dicom_1: '/home/lenkovat/Stage/Data/irm_aurane/images/pat00000/st000000/se000006/mr000001'
+
+  clementina:
+    path_voxel: '/home/lenkovat/Stage/Data/atlases/3Dspaceclementina.nii'
+    path_sacrum: '/home/lenkovat/Stage/Data/atlases/clementina/3Dspaceclementina_sacrum.nii'
+    path_iliaque: '/home/lenkovat/Stage/Data/atlases/clementina/3Dspaceclementina_iliaque.nii'
+    path_dicom_0: '/home/lenkovat/Stage/Data/irm_Clementina/images/pat00000/st000000/se000006/mr000000'
+    path_dicom_1: '/home/lenkovat/Stage/Data/irm_Clementina/images/pat00000/st000000/se000006/mr000001'
+  
+  hoang:
+    path_voxel: '/home/lenkovat/Stage/Data/atlases/hoANG/3Dhoang.nii'
+    path_sacrum: '/home/lenkovat/Stage/Data/atlases/hoANG/3Dhoang-sacrum.nii'
+    path_iliaque: '/home/lenkovat/Stage/Data/atlases/hoANG/3Dhoang-iliaque.nii'
+    path_dicom_0: '/home/lenkovat/Stage/Data/irm_hoang/images/pat00000/st000000/se000006/mr000000'
+    path_dicom_1: '/home/lenkovat/Stage/Data/irm_hoang/images/pat00000/st000000/se000006/mr000001'
+
+  martin:
+    path_voxel: '/home/lenkovat/Stage/Data/atlases/martin/3dmartin.nii'
+    path_sacrum: '/home/lenkovat/Stage/Data/atlases/martin/3dmartinsacrum.nii'
+    path_iliaque: '/home/lenkovat/Stage/Data/atlases/martin/3dmartinILIAQUE.nii'
+    path_dicom_0: '/home/lenkovat/Stage/Data/irm_martin/images/pat00000/st000000/se000007/mr000000'
+    path_dicom_1: '/home/lenkovat/Stage/Data/irm_martin/images/pat00000/st000000/se000007/mr000001'
+
+  tanya:
+    path_voxel: '/home/lenkovat/Stage/Data/atlases/3Dspacetatyana.nii'
+    path_sacrum: '/home/lenkovat/Stage/Data/atlases/tatyana-mask-sacrum.nii.nii'
+    path_iliaque: '/home/lenkovat/Stage/Data/atlases/tanya/tatyana-mask-iliiaques.nii'
+    path_dicom_0: '/home/lenkovat/Stage/Data/irm_Tanya/images/pat00000/st000000/se000006/mr000000'
+    path_dicom_1: '/home/lenkovat/Stage/Data/irm_Tanya/images/pat00000/st000000/se000006/mr000001'
+
+##### TO CHANGE ######
+desir: './data/desir/'
+atlas_dicoms: '/home/lenkovat/Stage/Data/'
+desir_slices: "/home/aouadt/SpondiDetect/SpondiDetect/data/desir_slices"
+segmentation_target: '/home/aouadt/SpondiDetect/SpondiDetect/data/desir-segmented'
+######################
+
+
+inverted_desir: "./desir_description/inverted_desir.txt"
+asas_positive: "./desir_description/asas_positive.txt"
+correct_stirs: "./desir_description/correct_stirs.json"
+correct_t1s: "./desir_description/correct_t1s.json"
+ok_patients: "./desir_description/ok_patients.txt"
+all_patients: "./desir_description/all_patients.txt"
+wrong_crf_patients: "./desir_description/wrong_crf_patients.yaml"
+
+label_per_slice: "./data/per_slice_label.csv"
+desir_segmented: "./data/desir-segmented"
+desir_segmented_csv: './data/desir-segmented.csv'
+desir_nibs: "./data/desir_nib"
+
+rois_dataset: "./data/rois_dataset"
+rois_iliac_dataset_csv: "./data/rois_dataset/rois_iliac_dataset.csv"
+rois_iliac_sacrum_dataset_csv: "./data/rois_dataset/rois_iliac_sacrum_dataset.csv"
+rois_dataset_npys: "./data/rois_dataset/npys"
+rois_dataset_pngs: "./data/rois_dataset/pngs"
+
+
+# Deep learning segmentation
+
+dl_segmentation_args: "./src/scripts/deep_segmentation/args.yaml"
+
+# path_dirs: "./tensorboards"
+tensorboard_dl_segmentation: "./tensorboards/dl_segmentation"
+manager_dl_segmentation: "./tensorboards/dl_segmentation"
+
+path_input_var: './src/scripts/values_input.txt'
+path_output_var: './src/scripts/values_output.txt'
+path_results: './results/results.pkl'
+path_results_out: './results/results_agg.pkl'
+
+results_dl_segmentation: "./results/dl_segmentation/results.pkl"
+train_test_split_yaml_dl_segmentation: "./src/scripts/deep_segmentation/train_test_split.yaml"
+
+# Binary Classification segmentation
+
+binary_classification_args: "./src/scripts/binary_classification/args.yaml"
+
+tensorboard_binary_classification: "./tensorboards/binary_classification"
+manager_binary_classification: "./tensorboards/binary_classification"
+
+results_binary_classification: "./results/binary_classification/results.pkl"
+train_test_split_yaml_binary_classification: "./src/scripts/binary_classification/train_test_split.yaml"
+
+# Registration
+
+elastix_subprocess: "./src/registration/elastix_subprocess.py"
+
+running_elastix_vars: './simple_elastix_runs/running_elastix_vars_0'
+elastix_logs: './simple_elastix_runs'
+
+registration_grid_args: "./src/scripts/registration_grid/args.yaml"
+
+temporary_parameterMap: './simple_elastix_runs/temporary_parametermap.txt'
+
+results_atlasn_atlask: "./results/Registration/Atlasn-Atlask"
+results_atlas_desir: "./results/Registration/Atlas-Desir"
+results_registration_sandbox: "./results/Registration/sandbox"
+
+# Postprocessing
+
+postprocessing_args: "./src/scripts/postprocess/args.yaml"
+
+
+get_rois_args: "./src/scripts/get_rois/args.yaml"
